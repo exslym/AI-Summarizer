@@ -1,0 +1,7 @@
+# //! don't delete this file!
+
+**/node_modules/**
+**/bower_components/**
+**/build/**
+**/public/**
+**/tools/**

@@ -1,0 +1,69 @@
+{
+  "name": "ai_summarizer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "An Article Summarizer Application using OpenAI's GPT model (Rapid API)",
+  "license": "ISC",
+  "keywords": [
+    "vite",
+    "react",
+    "eslint",
+    "prettier",
+    "@vitejs/plugin-legacy",
+    "babel",
+    "postcss",
+    "autoprefixer",
+    "vite-plugin-eslint",
+    "vite-plugin-image-optimizer"
+  ],
+  "author": "exslym",
+  "homepage": "https://github.com/exslym/AI-Summarizer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exslym/AI-Summarizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/exslym/AI-Summarizer/issues"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "scripts": {
+    "start": "vite --port 3000 --open",
+    "serve": "vite preview --port 3001 --open",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^4.0.1",
+    "@vitejs/plugin-react": "latest",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^5.0.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3",
+    "sharp": "^0.31.3",
+    "svgo": "^3.0.2",
+    "terser": "^5.16.6",
+    "vite": "^4.3.0",
+    "vite-aliases": "^0.10.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-image-optimizer": "^1.1.2"
+  }
+}

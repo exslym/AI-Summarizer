@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "checkJs": false,
+    "jsx": "preserve",
+    "target": "ES2022",
+    "module": "commonjs"
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "bower_components",
+    "**/bower_components/*",
+    "tools",
+    "**/tools/*",
+    "public",
+    "**/public/*"
+  ]
+}
