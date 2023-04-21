@@ -1,6 +1,5 @@
 import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
-import autoprefixer from 'autoprefixer';
 import Path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
@@ -60,9 +59,6 @@ export default defineConfig({
     }),
   ],
   css: {
-    postcss: {
-      plugins: [autoprefixer],
-    },
     devSourcemap: true,
   },
   server: {
