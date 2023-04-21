@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from 'vite';
 import { ViteAliases } from 'vite-aliases';
 import eslint from 'vite-plugin-eslint';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import pages from './src/pages/pages.config';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -50,9 +49,6 @@ export default defineConfig({
   plugins: [
     react(),
     eslint(),
-    ViteImageOptimizer({
-      DEFAULT_OPTIONS,
-    }),
     ViteAliases(),
     legacy({
       targets: ['> 0.5%', 'last 2 versions', 'Firefox ESR', 'not dead'],
@@ -67,58 +63,3 @@ export default defineConfig({
     host: '0.0.0.0',
   },
 });
-
-const DEFAULT_OPTIONS = {
-  test: /\.(svg|png|jpe?g|tiff|gif|webp|avif)$/i,
-  exclude: undefined,
-  include: undefined,
-  excludePublic: ['./public/**/*'],
-  includePublic: false,
-  logStats: true,
-  svg: {
-    multipass: true,
-    plugins: [
-      {
-        name: 'preset-default',
-        params: {
-          overrides: {
-            cleanupNumericValues: false,
-            removeViewBox: false,
-          },
-          cleanupIDs: {
-            minify: false,
-            remove: false,
-          },
-          convertPathData: false,
-        },
-      },
-      'sortAttrs',
-      {
-        name: 'addAttributesToSVGElement',
-        params: {
-          attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
-        },
-      },
-    ],
-  },
-  png: {
-    quality: 100,
-    palette: true,
-  },
-  jpeg: {
-    quality: 95,
-  },
-  jpg: {
-    quality: 95,
-  },
-  tiff: {
-    quality: 100,
-  },
-  gif: {},
-  webp: {
-    lossless: true,
-  },
-  avif: {
-    lossless: true,
-  },
-};
