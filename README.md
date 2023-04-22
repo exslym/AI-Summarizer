@@ -34,4 +34,4 @@ npm run deploy
 
 ### Features:
 
-`React`   `Redux Toolkit`   `Vite`   `TailwindCSS`
+`React`   `Redux Toolkit`   `Vite`   `TailwindCSS`   `Rapid API`
