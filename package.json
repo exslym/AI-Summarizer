@@ -14,8 +14,7 @@
     "babel",
     "postcss",
     "autoprefixer",
-    "vite-plugin-eslint",
-    "vite-plugin-image-optimizer"
+    "vite-plugin-eslint"
   ],
   "author": "exslym",
   "homepage": "https://github.com/exslym/AI-Summarizer",
