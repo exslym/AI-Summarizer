@@ -82,7 +82,7 @@
 }
 
 .custom_gradient {
-  @apply bg-gradient-to-r from-green-300 via-purple-400 to-red-300 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-red-300 via-purple-400 to-green-300 bg-clip-text text-transparent;
 }
 
 .desc {
