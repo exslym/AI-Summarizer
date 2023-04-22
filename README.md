@@ -24,7 +24,7 @@ npm start
 npm run build
 ```
 
-### Deployment on GitHub Pages (for client side)
+### Deployment on GitHub Pages
 
 ```
 npm run deploy
@@ -34,9 +34,4 @@ npm run deploy
 
 ### Features:
 
-- `Legacy Browsers` support via **@vite/plugin-legacy** with built-in **babel**
-- `SCSS` support via **sass**
-- `Autoprefix` support via **postcss**
-- `3D Effects` support via **ThreeJS**
-- `Animation` support via **Framer Motion**
-- `Styles` support via **TailwindCSS**
+`React`   `Redux Toolkit`   `Vite`   `TailwindCSS`
