@@ -2,7 +2,7 @@
 
 [![preview](https://github.com/exslym/AI-Summarizer/blob/main/public/preview.jpg)](https://github.com/exslym/AI-Summarizer/)
 
-### This minimalistic cozy color app is an open-source article summarizer that transforms lengthy articles into clear and concise summaries, powered by RapidAPI.
+### This minimalistic cozy color app is an open-source article summarizer that transforms lengthy articles into clear and concise summaries, powered by RapidAPI (limited requests per day).
 
 ---
 
