@@ -24,7 +24,8 @@
   }
   &:after {
     content: '';
-    background-image: url('assets/grid.svg');
+    // background-image: url('assets/grid.svg');
+    background: none;
     z-index: 1;
     opacity: 0.4;
     filter: invert(1);
@@ -68,12 +69,20 @@
   @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
 }
 
+.custom_btn {
+  @apply rounded-full bg-gradient-to-r from-green-300 via-purple-300 to-red-300 py-1 px-4 text-lg font-bold text-white transition-all hover:bg-none hover:bg-white hover:text-black ring-inset ring-1 ring-transparent hover:ring-black;
+}
+
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+  @apply mt-24 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
 }
 
 .orange_gradient {
   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.custom_gradient {
+  @apply bg-gradient-to-r from-green-300 via-purple-400 to-red-300 bg-clip-text text-transparent;
 }
 
 .desc {
