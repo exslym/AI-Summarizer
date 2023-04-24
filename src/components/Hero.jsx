@@ -5,7 +5,14 @@ const Hero = () => {
     <header className='w-full flex justify-center items-center flex-col'>
       <nav className='fixed top-0 w-full bg-slate-100'>
         <div className='max-w-7xl flex justify-between items-center mx-auto sm:pl-16 sm:pr-16 pl-6 pr-6 pt-3 pb-3'>
-          <img src={logo} alt='logo' className='w-10 object-contain' />
+          <a
+            href='https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=exslym'
+            target='_blank'
+            rel='noreferrer'
+            className='rounded-md'
+          >
+            <img src={logo} alt='logo' className='w-10 object-contain' />
+          </a>
           <button
             type='button'
             onClick={() => {
