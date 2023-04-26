@@ -4,6 +4,8 @@ import { copy, linkIcon, loader, tick } from '../assets';
 import { useLazyGetSummaryQuery } from '../services/article';
 
 const Demo = () => {
+  console.log(localStorage.getItem('articles'));
+
   const [article, setArticle] = useState({
     url: '',
     summary: '',
@@ -13,9 +15,8 @@ const Demo = () => {
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
   useEffect(() => {
-    const articlesFromLocalStorage = JSON.parse(localStorage.getItem('articles'));
-
-    if (articlesFromLocalStorage) {
+    if (localStorage.getItem('articles')) {
+      const articlesFromLocalStorage = JSON.parse(localStorage.getItem('articles'));
       setAllArticles(articlesFromLocalStorage);
     }
   }, []);
@@ -49,11 +50,14 @@ const Demo = () => {
       handleSubmit(e);
     }
   };
+  const selectAll = (e) => {
+    e.target.select();
+  };
 
   return (
-    <section className='mt-16 w-full max-w-xl'>
+    <section className='mt-8 w-full max-w-2xl'>
       {/* Search */}
-      <div className='flex flex-col w-full gap-2'>
+      <div className='flex flex-col w-full gap-3'>
         <form className='relative flex justify-center items-center' onSubmit={handleSubmit}>
           <img src={linkIcon} alt='link-icon' className='absolute left-0 my-2 ml-3 w-5' />
 
@@ -63,6 +67,7 @@ const Demo = () => {
             value={article.url}
             onChange={(e) => setArticle({ ...article, url: e.target.value })}
             onKeyDown={handleKeyDown}
+            onClick={selectAll}
             required
             className='url_input peer'
           />
@@ -75,7 +80,7 @@ const Demo = () => {
         </form>
 
         {/* Browse History */}
-        <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
+        <div className='custom_scroll flex flex-col gap-1 max-h-60 overflow-y-auto'>
           {allArticles.reverse().map((item, index) => (
             <div key={`link-${index}`} onClick={() => setArticle(item)} className='link_card'>
               <div className='copy_btn' onClick={() => handleCopy(item.url)}>

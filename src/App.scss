@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: '20db';
+  src: url('./assets/20db.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  // scrollbar-gutter: stable;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    border-radius: 50px;
+    width: 14px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border: solid 4px transparent;
+    border-right-width: 4px;
+    box-sizing: border-box;
+    background-clip: content-box;
+  }
+}
 .main {
   width: 100vw;
   min-height: 100vh;
   position: fixed;
   display: flex;
   justify-content: center;
-  padding: 120px 24px 160px 24px;
+  // padding: 120px 24px 160px 24px;
   pointer-events: none;
   &:before,
   &:after {
@@ -19,7 +45,7 @@
   }
   &:before {
     content: '';
-    background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+    background: radial-gradient(circle, rgba(31, 28, 84, 0) 0, #fafafa 100%);
     z-index: 2;
   }
   &:after {
@@ -29,6 +55,25 @@
     z-index: 1;
     opacity: 0.4;
     filter: invert(1);
+  }
+}
+
+.custom_scroll {
+  &::-webkit-scrollbar {
+    border-radius: 50px;
+    width: 11px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 50px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border: solid 4px transparent;
+    border-right-width: 4px;
+    box-sizing: border-box;
+    background-clip: content-box;
   }
 }
 
@@ -53,16 +98,20 @@
   opacity: 0.15;
 }
 
-@media screen and (max-width: 640px) {
-  .main {
-    padding: 0;
-  }
-}
+// @media screen and (max-width: 640px) {
+//   .main {
+//     padding: 0;
+//   }
+// }
 
 /* Tailwind Styles */
 
+.main {
+  @apply p-6;
+}
+
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto  px-6;
 }
 
 .black_btn {
@@ -70,11 +119,16 @@
 }
 
 .custom_btn {
-  @apply rounded-full bg-gradient-to-r from-green-300 via-purple-300 to-red-300 py-1 px-4 text-lg font-bold text-white transition-all hover:bg-none hover:bg-white hover:text-black ring-inset ring-1 ring-transparent hover:ring-black;
+  @apply rounded-full bg-gradient-to-tr from-red-300 via-purple-300 to-green-300 py-1 px-4 text-lg font-bold text-white transition-all hover:bg-none hover:bg-white hover:text-black ring-inset ring-1 ring-transparent hover:ring-black;
+}
+
+.custom_logo {
+  font-family: '20db';
+  @apply rounded-md w-10 h-10 bg-gradient-to-br from-red-300 via-purple-300 to-green-300 flex items-center justify-center text-3xl leading-none pb-0.5 font-bold text-white transition-all hover:bg-none hover:bg-white hover:text-black ring-inset ring-1 ring-transparent hover:ring-black;
 }
 
 .head_text {
-  @apply mt-24 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+  @apply max-w-2xl mt-24 font-extrabold leading-[1.15] sm:text-[54px] md:text-[58px] text-4xl text-center text-black;
 }
 
 .orange_gradient {
@@ -82,7 +136,7 @@
 }
 
 .custom_gradient {
-  @apply bg-gradient-to-r from-red-300 via-purple-400 to-green-300 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-green-300 via-purple-400 to-red-300 bg-clip-text text-transparent;
 }
 
 .desc {
